@@ -16,7 +16,8 @@ jobs:
           username: corinnekrych
           password: ${{ secrets.DOCKER_PASSWORD }}
       #- uses: cloudbees-io/kaniko@v1 # PROD
-      - uses: cloudbees-io/kaniko/.cloudbees/testing # PRE-PROD
+      #- uses: cloudbees-io/kaniko/.cloudbees/testing # PRE-PROD
+      - uses: cloudbees-io/kaniko # PRE-PROD
         name: Push image to OCI registry
         with:
           destination: index.docker.io/corinnekrych/go-hello-world-docker:1.0.1
