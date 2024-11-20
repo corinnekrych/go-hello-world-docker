@@ -4,8 +4,7 @@ name: My automation
 on:
   workflow_dispatch:
 jobs:
-  ci-job:
-
+  deploy:
     steps:
       - uses: cloudbees-io/checkout@v1
         name: checkout
