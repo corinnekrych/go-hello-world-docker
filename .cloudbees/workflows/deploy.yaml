@@ -13,10 +13,10 @@ jobs:
         kind: deploy
         with:
           registry: https://index.docker.io/v1/
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: corinnekrych
           password: ${{ secrets.DOCKER_PASSWORD }}
       - uses: cloudbees-io/kaniko/.cloudbees/testing
         name: Push image to OCI registry
         with:
-          destination: index.docker.io/${{ secrets.DOCKER_USERNAME }}/go-hello-world-docker:1.0.0
+          destination: index.docker.io/corinnekrych/go-hello-world-docker:1.0.0
           labels: app=cbp
