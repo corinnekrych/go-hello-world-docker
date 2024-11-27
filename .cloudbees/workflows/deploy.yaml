@@ -19,5 +19,5 @@ jobs:
       - uses: cloudbees-io/kaniko/.cloudbees/testing # PRE-PROD
         name: Push image to OCI registry
         with:
-          destination: index.docker.io/corinnekrych/go-hello-world-docker:1.0.1
+          destination: index.docker.io/corinnekrych/go-hello-world-docker:1.0.1-${{cloudbees.version}}
           labels: app=cbp
