@@ -3,7 +3,7 @@ kind: workflow
 name: wf18
 on:
   schedule:
-    - cron: 21 * 2 12 *
+    - cron: 24 * * * *
 jobs:
   build:
     steps:
