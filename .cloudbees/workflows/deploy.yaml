@@ -20,3 +20,8 @@ jobs:
         with:
           destination: index.docker.io/corinnekrych/go-hello-world-docker:1.0.1-${{cloudbees.version}}
           labels: app=cbp
+      - uses: cloudbees-io/kaniko/.cloudbees/testing
+        name: Push image to OCI registry
+        with:
+          destination: index.docker.io/corinnekrych/go-hello-world-docker-second:1.0.10-${{cloudbees.version}}
+          labels: app=cbp
