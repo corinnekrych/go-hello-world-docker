@@ -15,7 +15,7 @@ jobs:
           registry: https://index.docker.io/v1/
           username: corinnekrych
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - uses: cloudbees-io/kaniko/.cloudbees/actions
+      - uses: cloudbees-io/kaniko/.cloudbees/testing
         name: Push image to OCI registry
         with:
           destination: index.docker.io/corinnekrych/go-hello-world-docker:1.0.1-${{cloudbees.version}}
