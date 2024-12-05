@@ -1,12 +1,8 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-
 on:
-  push:
-    branches:
-      - '**'
-
+  workflow_dispatch:
 jobs:
   build:
     steps:
@@ -22,4 +18,4 @@ jobs:
             ## Test markup and property rendering
             - Run ID: ${{ cloudbees.run_id }}
             - [backend.tar](https://ourcompany.com/repo/backend.tar)
-          format: MARKDOWN 
+          format: MARKDOWN
