@@ -25,3 +25,23 @@ jobs:
         with:
           destination: index.docker.io/corinnekrych/boo:${{cloudbees.version}}
           labels: app=cbp
+      - uses: cloudbees-io/kaniko/.cloudbees/testing
+        name: Push image to OCI registry
+        with:
+          destination: index.docker.io/corinnekrych/foo:${{cloudbees.version}}
+          labels: app=cbp          
+      - uses: cloudbees-io/kaniko/.cloudbees/testing
+        name: Push image to OCI registry
+        with:
+          destination: index.docker.io/corinnekrych/bar:${{cloudbees.version}}
+          labels: app=cbp  
+      - uses: cloudbees-io/kaniko/.cloudbees/testing
+        name: Push image to OCI registry
+        with:
+          destination: index.docker.io/corinnekrych/jas:${{cloudbees.version}}
+          labels: app=cbp    
+      - uses: cloudbees-io/kaniko/.cloudbees/testing
+        name: Push image to OCI registry
+        with:
+          destination: index.docker.io/corinnekrych/toto:${{cloudbees.version}}
+          labels: app=cbp                                
